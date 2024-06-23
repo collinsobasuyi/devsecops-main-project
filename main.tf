@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_bucket" {
-  bucket = "terraform-april-collins"
+  bucket = "terraform-april-collins-2"
   tags = {
-    Name        = "terraform-april-collins"
+    Name        = "terraform-april-collins-2"
     Environment = "Dev"
   }
 }
