@@ -33,7 +33,7 @@ jobs:
 
       # Apply Terraform to create S3 bucket
       - name: Apply Terraform
-        run: terraform apply -auto-approve
+        run: terraform apply -target=aws_s3_bucket.terraform_bucket -auto-approve
 
   configure-backend:
     name: Configure Backend
@@ -60,3 +60,7 @@ jobs:
       # Initialize Terraform
       - name: Initialize Terraform
         run: terraform init
+
+      # Apply Terraform
+      - name: Apply Terraform
+        run: terraform apply -auto-approve
