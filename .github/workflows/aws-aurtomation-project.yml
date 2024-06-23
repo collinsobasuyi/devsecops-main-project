@@ -29,6 +29,6 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
-      # Deploy Terraform
-      - name: Deploy Terraform
+      # Apply Terraform
+      - name: Apply Terraform
         run: terraform apply -auto-approve
